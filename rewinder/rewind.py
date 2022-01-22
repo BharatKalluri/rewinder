@@ -8,7 +8,7 @@ from .constants import REWINDER_RECORDINGS_DIR, logger
 
 def get_wav_file_name(start_time: int, end_time: int):
     start_time_str = time.strftime("%H:%M", time.localtime(start_time))
-    end_time_str = time.strftime("%H:%M", time.localtime(start_time))
+    end_time_str = time.strftime("%H:%M", time.localtime(end_time))
     return f"{start_time_str}-{end_time_str}.wav"
 
 
