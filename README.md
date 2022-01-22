@@ -15,3 +15,9 @@ rewinder rewind 10 # to get 10 minutes of audio
 ```shell
 rewinder daemon
 ```
+
+### Credits
+
+Shamelessly copied the idea from [backtrack](https://backtrack.team/). Loved the idea, but unfortunately did not find
+an alternative for linux. So, I hacked on one over a sunday. Eventually I plan on making an
+elementary OS desktop app too.
