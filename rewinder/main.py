@@ -2,7 +2,7 @@ from multiprocessing import Process
 
 import typer
 
-from .backtrack import rewind_audio
+from .rewind import rewind_audio
 from .cleanup import schedule_cleanup
 from .daemon import initiate_daemon
 

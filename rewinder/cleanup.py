@@ -3,7 +3,7 @@ import logging
 import os
 import time
 
-from .constants import BACKTRACK_RECORDINGS_DIR, logger
+from .constants import REWINDER_RECORDINGS_DIR, logger
 
 
 def initiate_cleanup(retain_recordings_till_minutes: int, run_cleanup_every_x_min: int):
@@ -13,12 +13,12 @@ def initiate_cleanup(retain_recordings_till_minutes: int, run_cleanup_every_x_mi
 
     current_time = int(time.time())
     retain_recordings_till = current_time - (retain_recordings_till_minutes * 60)
-    list_of_files = glob.glob(os.path.join(BACKTRACK_RECORDINGS_DIR, "*.wav"))
+    list_of_files = glob.glob(os.path.join(REWINDER_RECORDINGS_DIR, "*.wav"))
     start_times = list(
         sorted(int(el.split("/")[-1].replace(".wav", "")) for el in list_of_files)
     )
     files_to_delete = [
-        os.path.join(BACKTRACK_RECORDINGS_DIR, f"{ts}.wav")
+        os.path.join(REWINDER_RECORDINGS_DIR, f"{ts}.wav")
         for ts in start_times
         if ts < retain_recordings_till
     ]
