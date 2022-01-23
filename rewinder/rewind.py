@@ -30,4 +30,4 @@ def rewind_audio(minutes: int):
         ],
         wav_out_file,
     )
-    logger.info(f"rewind-ed and stored at {wav_out_file}")
+    print(f"rewind-ed and stored at {wav_out_file}")
